@@ -1,0 +1,112 @@
+<html>
+    <head>
+        
+        <title>Resume/CV Builder</title>
+        
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+        <link rel="stylesheet" href="nope.css">
+    </head>
+    <body>
+        
+            
+        
+        <div class="ddn">
+            <div class="nav">
+                <button id="cmd" onclick="printpdf()" class="navbtn"><i class="fas fa-download"></i></button>
+                <form>
+                <input type="hidden" id="custinfo" name="custinfo">
+                <button class="navbtn"><i class="fas fa-save"></i></button>
+                </form>
+                <button class="navbtn" href=""><i class="fas fa-home"></i></button>
+                </div>
+           
+                <div class="resume" id="resume">
+                   <section id="print">
+                        <div class="head">
+                           <div class="main">
+                               
+                               <span class="name"  ><input type="text" placeholder="Enter your name" class="input"  class="namesection" required></span> 
+                               <div class="post"  ><input type="text" placeholder="Enter your profile"class="profile" ></div>
+                           </div>
+                           <div class="contacts">
+                           <span class="content"><input type="number" placeholder="Enter phone"  class="skill0"></span><span class="symbol"> <i class="fas fa-phone"></i></span><br>
+                           <span  class="content"><input type="email" placeholder="Enter email" class="skill0"></span><span class="symbol"> <i class="fas fa-envelope"></i></span><br>
+                           <span  class="content"><input type="text" placeholder="Enter linkdin id" class="skill0"></span><span class="symbol"> <i class="fab fa-linkedin"></i></span><br>
+                           <span  class="content"><input type="text" placeholder="Enter address" class="skill0"></span><span class="symbol"> <i class="fas fa-map-marker-alt"></i></i></span>
+                           </div>
+                       </div>
+           
+                       <div class="line"></div>
+                       <div class="mainbody">
+                           <div class="leftside">
+                           <span class="title">MY SKILLS</span><br><br><div>
+                           <div class="skill"><span><input type="checkbox" class="input-checkbox"></span>  <span  ><input type="text" placeholder="Enter your skills" class="skill0"></span></div>
+                           <div id="skills"></div>
+                           <button id="skilladd" type="button" class="btn btn-success" onclick="addskill()"class="button1" style="background-color:rgb(131, 134, 134);"
+                           > Add skill</button>
+                           <button id="skillrem" type="button" class="btn btn-danger" onclick="remskill(event)"class="button1" style="background-color:rgb(118, 172, 172);"
+                           > </i>Remove Skill</button></div>
+                           <br><br><span class="title">LANGUAGES </span><br><br><div>
+                           <div class="language"><span><input type="checkbox" class="input-checkbox"></span><span  ></span> <span  ><input type="text" placeholder="Enter languages you know" class="skill0"></span></div>
+                           <div id="languages"></div>
+                           <button id="langadd" type="button" class="btn btn-success" onclick="addLang()"class="button1" style="background-color:rgb(131, 134, 134);">  Add Language</button>
+           
+                           <button id="langrem" type="button" class="btn btn-danger" onclick="remLang(event)"class="button1"style="background-color:rgb(118, 172, 172);"> </i>Remove Language</button></div>
+                           <br><br><span class="title">ACHIEVEMENTS</span><br><br><div>
+                           <div class="achieve" ><span><input type="checkbox" class="input-checkbox"></span><span  ><input type="text" placeholder="Enter your achievements " class="skill0"></span></div>
+                           <div id="achievement"></div>
+                           <button id="achadd" type="button" class="btn btn-success" onclick="addAch()"class="button1" style="background-color:rgb(131, 134, 134);"
+                           > Add Achieve</button>
+           
+                           <button id="achrem" type="button" class="btn btn-danger" onclick="remAch(event)"class="button1"style="background-color:rgb(118, 172, 172);" > </i>Remove Achieve</button></div>
+                           <br><br><span class="title">INTERESTS</span><br><br><div>
+                           <div class="achieve" ><span><input type="checkbox" class="input-checkbox"></span><span  ><input type="text" placeholder="Enter your interests" class="skill0"></span></div>
+                           <div id="interest"></div>
+                           <button id="Intadd" type="button" class="btn btn-success" onclick="addInt()"class="button1" style="background-color:rgb(131, 134, 134);"
+                           >Add Interest</button>
+           
+                           <button id="Intrem" type="button" class="btn btn-danger" onclick="remInt(event)"class="button1"style="background-color:rgb(118, 172, 172);"> </i>Remove Interest</button></div>
+                           </div>
+                           
+                           <div class="border"></div>
+                           <div class="rightside" >
+                           <span class="title1">PROFILE</span><br><br>
+                           <div class="pfo"><div  ><textarea name="" id="" cols="30" rows="4"type="text" placeholder="Enter about yourself........" class="skill1"></textarea></div></div>
+                           <br><br><span class="title">EDUCATIONAL QUALIFICATION</span><br><br><div>
+                           <div id="education">
+                               <div class="edublock">
+                                   <span><input type="checkbox" class="input-checkbox"></span>
+                                   <span class="education-head"  >YOUR DEGREE</span>
+                                   <div ><span  ><input type="text"placeholder="Enter institution" class="skill0"></span> <span  ><input type="date"placeholder="choose passing year" class="skill0"></span></div>
+                               </div>
+                           </div>
+           
+                           <button id="eduadd" type="button" class="btn btn-success" onclick="addedu()"class="button1" style="background-color:rgb(131, 134, 134);"
+                           > Add  Education</button>
+           
+                           <button id="edurem" type="button" class="btn btn-danger" onclick="remedu(event)"class="button1"style="background-color:rgb(118, 172, 172);"> </i>Remove Education</button></div>
+                           <br><br>
+                           <div class="new-section-div"><div><span><input type="checkbox" class="input-checkbox"></span><span class="title"  >NEW SECTION</span><br><br>
+                           <div  ><textarea name="" id="" cols="30" rows="4"  type="text" placeholder="This is the description area......." class="skill1"></textarea></div>
+                           </div>
+           
+                           <div id="newsec"></div>
+                           <button id="secadd" type="button" class="btn btn-success" onclick="addsec()"class="button1" style="background-color:rgb(131, 134, 134);"
+                           >Add Section</button>
+           
+                           <button id="secrem" type="button" class="btn btn-danger" onclick="remsec(event)" class="button1"style="background-color:rgb(118, 172, 172)" ;>Remove Section</button>
+                       
+                       </div>
+                   </section>
+                   
+                </div>
+                </div>
+                <script src="nope.js"></script>
+                
+        </div>
+          </body>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.8.0/html2pdf.bundle.min.js"></script>
+   
+           
+</html>
